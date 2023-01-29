@@ -9,6 +9,8 @@ import categoryRoutes from "./routes/category.js";
 import productRoutes from "./routes/product.js";
 import sslCommerzRoutes from "./routes/sslCommerzRoutes.js";
 
+const PORT = process.env.PORT || 5000;
+
 dotenv.config();
 
 const app = express();
@@ -30,6 +32,6 @@ app.use(categoryRoutes);
 app.use(productRoutes);
 app.use(sslCommerzRoutes);
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("Listening on port 5000");
 });
